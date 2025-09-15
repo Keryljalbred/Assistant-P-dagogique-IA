@@ -1,0 +1,23 @@
+# Cache et fichiers inutiles
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb
+*.db
+*.log
+*.DS_Store
+*.zip
+*.tar
+*.gz
+
+# IDE & environnements
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Modèles téléchargés / gros fichiers inutiles
+cache/
+huggingface/
+models/

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  llm-app:
+    build: .
+    container_name: assistant_pedagogique
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./docs:/app/docs
+      - ./index:/app/index
+    env_file:
+      - .env

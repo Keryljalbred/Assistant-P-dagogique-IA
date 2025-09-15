@@ -1,0 +1,9 @@
+streamlit
+transformers
+torch
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+deep-translator
+openai
