@@ -13,14 +13,14 @@ L’outil repose sur l’approche **RAG (Retrieval-Augmented Generation)** :
 
 
 
-Streamlit	Interface utilisateur (entrée de question, affichage de réponse et résumé)
-LangChain	Orchestration entre les composants de recherche et de génération
-HuggingFaceEmbeddings	Génération d'embeddings via all-MiniLM-L6-v2
-FAISS	Index vectoriel pour la recherche sémantique rapide
-FLAN-T5 (local)	Génération de réponse initiale
-GPT-3.5 (OpenAI)	Fallback si la réponse locale est insuffisante
-DeepTranslator	Traduction automatique FR ↔ EN
-SQLite	Sauvegarde des requêtes, réponses, résumés et thématiques détectées
+- Streamlit:	Interface utilisateur (entrée de question, affichage de réponse et résumé)
+- LangChain:	Orchestration entre les composants de recherche et de génération
+- HuggingFaceEmbeddings:	Génération d'embeddings via all-MiniLM-L6-v2
+- FAISS:	Index vectoriel pour la recherche sémantique rapide
+- FLAN-T5 (local):	Génération de réponse initiale
+- GPT-3.5 (OpenAI):	Fallback si la réponse locale est insuffisante
+- DeepTranslator:	Traduction automatique FR ↔ EN
+- SQLite:	Sauvegarde des requêtes, réponses, résumés et thématiques détectées
 
 
 
