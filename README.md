@@ -11,20 +11,18 @@ L’outil repose sur l’approche **RAG (Retrieval-Augmented Generation)** :
 
 ##  Architecture du système
 
-```mermaid
 
-    U[Utilisateur] -->|Pose une question| ST[Streamlit UI]
-    ST --> LC[LangChain RAG]
-    
-    LC -->|Recherche vectorielle| VS[FAISS + MiniLM]
-    LC -->|Génération de réponse| FL[FLAN-T5 (local)]
-    LC -->|Fallback si insuffisant| GPT[GPT-3.5 OpenAI]
 
-    LC -->|Traduction FR ↔ EN| DT[DeepTranslator]
-    LC -->|Sauvegarde| DB[(SQLite)]
+Streamlit	Interface utilisateur (entrée de question, affichage de réponse et résumé)
+LangChain	Orchestration entre les composants de recherche et de génération
+HuggingFaceEmbeddings	Génération d'embeddings via all-MiniLM-L6-v2
+FAISS	Index vectoriel pour la recherche sémantique rapide
+FLAN-T5 (local)	Génération de réponse initiale
+GPT-3.5 (OpenAI)	Fallback si la réponse locale est insuffisante
+DeepTranslator	Traduction automatique FR ↔ EN
+SQLite	Sauvegarde des requêtes, réponses, résumés et thématiques détectées
 
-    ST -->|Affiche réponse + résumé + thème| U
-```
+
 
 ##  Fonctionnalités
 - ** Recherche intelligente** : extraction de contexte depuis les documents vectorisés.
