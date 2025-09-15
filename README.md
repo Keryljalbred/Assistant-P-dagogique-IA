@@ -12,7 +12,7 @@ L’outil repose sur l’approche **RAG (Retrieval-Augmented Generation)** :
 ##  Architecture du système
 
 ```mermaid
-flowchart TD
+
     U[Utilisateur] -->|Pose une question| ST[Streamlit UI]
     ST --> LC[LangChain RAG]
     
